@@ -30,7 +30,8 @@ class FeedViewlet(GroupViewlet):
     def feedInfo(self):
         feeds = json_load(self.feeds)
         for feed in feeds:
-            yield feed
+            if (('url' in feed) and ('name' in feed)):
+                yield feed
 
     @Lazy
     def show(self):

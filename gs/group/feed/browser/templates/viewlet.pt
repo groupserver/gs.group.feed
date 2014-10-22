@@ -1,12 +1,14 @@
-<div id="gs-group-feed">
+<div id="gs-group-feed"
+     xmlns:tal="http://xml.zope.org/namespaces/tal">
   <div class="gs-group-feed" role="region"
        tal:repeat="feed view/feedInfo">
     <h3><a href="#"
            tal:attributes="href feed/name_url"
            tal:content="feed/name">Feeds</a></h3>
-    <p tal:attributes="data-feed feed/url">
+    <div tal:attributes="data-feed-url feed/url"
+         class="gs-group-feed-content">
       <span data-icon="&#xe619;" aria-hidden="true"
             class="loading"> </span> Loading
-    </p>
+    </div>
   </div>
 </div><!--gs-group-feed-->

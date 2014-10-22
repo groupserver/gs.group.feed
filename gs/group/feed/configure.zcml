@@ -27,24 +27,24 @@
     title="Feed viewlet"
     weight="10" />
 
-  <!--browser:viewlet
+  <browser:viewlet
     name="gs-group-feed-js"
     manager="gs.group.home.interfaces.IGroupHomepageSecondary"
     class=".viewlet.FeedViewlet"
-    template="browser/template/feedviewletjs.pt"
+    template="browser/templates/feedviewletjs.pt"
     permission="zope2.View"
     title="Feed viewlet JavaScript"
-    weight="10" /-->
+    weight="10" />
 
   <!-- Look at transifex-->
 
-  <!--browser:resource
+  <browser:resource
     name="gs-group-feed-20141021.js"
     file="browser/javascript/feed.js"
-    permission="zope2.Public"/-->
-  <!--browser:resource
-    name="gs-group-feed-20141021.js"
-    file="browser/javascript/feed.js"
-    permission="zope2.Public"/-->
+    permission="zope2.Public"/>
+  <browser:resource
+    name="FeedEk-2.0.js"
+    file="browser/javascript/FeedEk.js"
+    permission="zope2.Public"/>
 
 </configure>
