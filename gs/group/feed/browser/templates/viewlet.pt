@@ -5,7 +5,8 @@
     <h3><a href="#"
            tal:attributes="href feed/name_url"
            tal:content="feed/name">Feeds</a></h3>
-    <div tal:attributes="data-feed-url feed/url"
+    <div tal:attributes="data-feed-url feed/url;
+                         id string:gs-group-feed-content-${repeat/feed/index}"
          class="gs-group-feed-content">
       <span data-icon="&#xe619;" aria-hidden="true"
             class="loading"> </span> Loading

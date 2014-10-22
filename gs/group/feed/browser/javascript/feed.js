@@ -14,16 +14,15 @@ function gs_group_feed_init () {
 
 function gs_group_feed_add (i, e) {
     var feedDiv=null, feedUrl=null;
-    feedDiv = jQuery(e);
+    feedDiv = jQuery('#gs-group-feed-content-'+i);
     feedUrl = feedDiv.data('feed-url');
     feedDiv.FeedEk({
         FeedUrl: feedUrl,
-        MaxCount : 4,
+        MaxCount : 2,
         ShowDesc : false,
         ShowPubDate: true,
         DescCharacterLimit: 48,
     });
-
 }
 
 jQuery(window).load(function () {
