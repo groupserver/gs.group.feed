@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Copyright © 2014 OnlineGroups.net and Contributors. -->
+<!-- All Rights Reserved. -->
+
+<!-- This software is subject to the provisions of the Zope Public -->
+<!-- License, Version 2.1 (ZPL).  A copy of the ZPL should accompany this -->
+<!-- distribution. -->
+
+<!-- THIS SOFTWARE IS PROVIDED "AS IS" AND ANY AND ALL EXPRESS OR IMPLIED -->
+<!-- WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED -->
+<!-- WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND -->
+<!-- FITNESS FOR A PARTICULAR PURPOSE. -->
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:browser="http://namespaces.zope.org/browser"
+           xmlns:i18n="http://namespaces.zope.org/i18n"
+           i18n_domain="gs.group.feed">
+
+  <include package="zope.viewlet" file="meta.zcml" />
+  <i18n:registerTranslations directory="locales" />
+
+  <browser:viewlet
+    name="gs-group-feed"
+    manager="gs.group.home.interfaces.IGroupHomepageSecondary"
+    class=".viewlet.FeedViewlet"
+    template="browser/templates/viewlet.pt"
+    permission="zope2.View"
+    title="Feed viewlet"
+    weight="10" />
+
+  <!--browser:viewlet
+    name="gs-group-feed-js"
+    manager="gs.group.home.interfaces.IGroupHomepageSecondary"
+    class=".viewlet.FeedViewlet"
+    template="browser/template/feedviewletjs.pt"
+    permission="zope2.View"
+    title="Feed viewlet JavaScript"
+    weight="10" /-->
+
+  <!-- Look at transifex-->
+
+  <!--browser:resource
+    name="gs-group-feed-20141021.js"
+    file="browser/javascript/feed.js"
+    permission="zope2.Public"/-->
+  <!--browser:resource
+    name="gs-group-feed-20141021.js"
+    file="browser/javascript/feed.js"
+    permission="zope2.Public"/-->
+
+</configure>
