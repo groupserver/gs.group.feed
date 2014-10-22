@@ -20,12 +20,23 @@ stored as a JSON_ blob in the group.
 JSON
 ====
 
-The JSON for the feeds is a list of feed objects. Each feed
-object consists of the following.
+The JSON for the feeds is a list of feed objects, stored as a
+string in the ``webfeeds`` property of the group folder. Each
+feed object consists of the following.
 
 :``name``: The name of the Web feed.
 :``name_url``: The page that the name links to.
-:``feed_url``: The web-feed URL
+:``url``: The web-feed URL
+
+For example::
+
+  [
+    {
+      "name": "Issue tracker", 
+      "feed_url": "https://redmine.iopen.net/projects/groupserver/activity.atom", 
+      "name_url": "https://redmine.iopen.net/projects/groupserver/activity"
+    }
+  ]
 
 Resources
 =========

@@ -1,4 +1,12 @@
-<div id="gs-group-feed" role="region"
-     aria-labelledby="gs-group-feed-h">
-  <h3 id="gs-group-feed-h">Feeds</h3>
+<div id="gs-group-feed">
+  <div class="gs-group-feed" role="region"
+       tal:repeat="feed view/feedInfo">
+    <h3><a href="#"
+           tal:attributes="href feed/name_url"
+           tal:content="feed/name">Feeds</a></h3>
+    <p tal:attributes="data-feed feed/url">
+      <span data-icon="&#xe619;" aria-hidden="true"
+            class="loading"> </span> Loading
+    </p>
+  </div>
 </div><!--gs-group-feed-->
